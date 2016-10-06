@@ -52,8 +52,9 @@ static void import_cmdline(const std::string& key,
 void init_target_properties()
 {
     std::string device;
-
-    device = property_get("ro.cm.device");
+// also u need a commit in build repo to make this work
+// for reference http://review.cyanogenmod.org/#/c/11423/1
+    device = property_get("ro.aosp.device");
     if (device != "tomato")
         return;
 
